@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './LearningPage.css'; 
 
 const LearningPage = () => {
   const [progress, setProgress] = useState(0);

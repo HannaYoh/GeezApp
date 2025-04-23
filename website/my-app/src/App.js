@@ -1,9 +1,10 @@
 import LearningPage from './LearningPage';
+import HomePage from './HomePage';
 
 function App() {
   return (
     <div>
-      <LearningPage />
+      <HomePage />
     </div>
   );
 }
