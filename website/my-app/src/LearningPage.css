@@ -1,0 +1,82 @@
+.learn-lingo-page {
+    display: flex;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #3a8e07;
+    color: black;
+  }
+  
+  .sidebar {
+    width: 200px;
+    background-color: #2e4d2e;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar li {
+    margin: 10px 0;
+    cursor: pointer;
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  .header {
+    text-align: center;
+  }
+  
+  .languages .flags {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+  }
+  
+  .add-language {
+    background-color: #ffd700;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .skills, .lecture, .challenge, .leaderboard, .activities {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #2e4d2e;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .start-quiz, .begin-lecture, .try-now {
+    background-color: #ffd700;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .leaderboard ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .activities .activity-icons {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .activities .activity {
+    background-color: #ffd700;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }

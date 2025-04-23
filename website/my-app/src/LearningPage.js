@@ -1,112 +1,75 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './LearningPage.css'; 
 
 const LearningPage = () => {
-  const [progress, setProgress] = useState(0);
-  const [life, setLife] = useState(3); 
-  const [streak, setStreak] = useState(5); 
-  const [score, setScore] = useState(100); 
-
-  const handleNextLesson = () => {
-    setProgress(progress + 10);
-    setScore(score + 10); 
-    setStreak(streak + 1); 
-  };
-
   return (
-    <div style={styles.container}>
-      <aside style={styles.sidebar}>
-        <nav>
-          <ul style={styles.navList}>
-            <li style={styles.navItem}>🏠 Home</li>
-            <li style={styles.navItem}>📚 Lessons</li>
-            <li style={styles.navItem}>🎯 Goals</li>
-            <li style={styles.navItem}>🏆 Leaderboard</li>
-          </ul>
-        </nav>
-      </aside>
-      <main style={styles.main}>
-        <header style={styles.topHeader}>
-          <div style={styles.headerItem}>❤️ {life}</div>
-          <div style={styles.headerItem}>🔥 {streak}</div>
-          <div style={styles.headerItem}>⭐ Score: {score}</div>
+    <div className="learn-lingo-page">
+      <nav className="sidebar">
+        <ul>
+          <li>🏠 Home</li>
+          <li>📚 Practice</li>
+          <li>🏆 Leaderboard</li>
+          <li>👤 Profile</li>
+          <li>⚙️ Settings</li>
+          <li>🚪 Logout</li>
+        </ul>
+      </nav>
+      <main className="main-content">
+        <header className="header">
+          <h1>Good evening, Lisa!</h1>
+          <p>Level 76</p>
         </header>
-        <section style={styles.content}>
-          <h1>Language Learning Path</h1>
-          <p>Progress: {progress}%</p>
-          <button style={styles.button} onClick={handleNextLesson}>
-            Next Lesson
-          </button>
+
+        <section className="languages">
+          <h2>Your Languages</h2>
+          <div className="flags">
+            <span role="img" aria-label="Spanish">🇪🇸</span>
+            <span role="img" aria-label="Italian">🇮🇹</span>
+            <span role="img" aria-label="French">🇫🇷</span>
+            <span role="img" aria-label="German">🇩🇪</span>
+            <button className="add-language">+</button>
+          </div>
+        </section>
+
+        <section className="skills">
+          <h2>Test your skills</h2>
+          <button className="start-quiz">Start Quiz</button>
+        </section>
+
+        <section className="lecture">
+          <h2>Today's Lecture</h2>
+          <p>Italian - Food 4</p>
+          <button className="begin-lecture">Begin</button>
+        </section>
+
+        <section className="challenge">
+          <h2>Daily Challenge</h2>
+          <p>Guess 20 words without failing!</p>
+          <button className="try-now">Try Now</button>
+        </section>
+
+        <section className="leaderboard">
+          <h2>Leaderboard</h2>
+          <ul>
+            <li>#01 Mark: 2393 pts</li>
+            <li>#02 Hannah: 2079 pts</li>
+            <li>#03 Mony: 1823 pts</li>
+            <li>#07 You: 400 pts</li>
+          </ul>
+        </section>
+
+        <section className="activities">
+          <h2>Activities</h2>
+          <div className="activity-icons">
+            <div className="activity">📖 Reading</div>
+            <div className="activity">💡 Lifestyle</div>
+            <div className="activity">✍️ Grammar</div>
+            <div className="activity">🎯 Skill Test</div>
+          </div>
         </section>
       </main>
     </div>
   );
-};
-
-const styles = {
-  container: {
-    display: 'flex',
-    fontFamily: 'Arial, sans-serif',
-    backgroundColor: '#683BAB',
-    color: 'white',
-    height: '100vh',
-  },
-  sidebar: {
-    width: '200px',
-    backgroundColor: '#593392',
-    padding: '20px',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-  },
-  navList: {
-    listStyle: 'none',
-    padding: 0,
-    width: '100%',
-  },
-  navItem: {
-    padding: '10px',
-    cursor: 'pointer',
-    fontSize: '18px',
-    textAlign: 'center',
-    borderRadius: '5px',
-    backgroundColor: '#FFD700',
-    marginBottom: '10px',
-  },
-  main: {
-    flex: 1,
-    textAlign: 'center',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    padding: '20px',
-  },
-  topHeader: {
-    display: 'flex',
-    justifyContent: 'space-around',
-    width: '100%',
-    backgroundColor: '#593392',
-    padding: '10px',
-    borderRadius: '5px',
-    color: '#FFD700',
-  },
-  headerItem: {
-    fontSize: '18px',
-    fontWeight: 'bold',
-  },
-  content: {
-    marginTop: '20px',
-  },
-  button: {
-    backgroundColor: '#FFD700',
-    border: 'none',
-    padding: '10px 20px',
-    fontSize: '18px',
-    margin: '10px',
-    cursor: 'pointer',
-    borderRadius: '5px',
-  },
 };
 
 export default LearningPage;
